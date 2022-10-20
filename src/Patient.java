@@ -16,4 +16,7 @@ public class Patient {
     public Patient () {
 
     }
+    public Appointment bookAppointment() {
+        return null;
+    }
 }

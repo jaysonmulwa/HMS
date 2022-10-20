@@ -4,4 +4,12 @@ public class Nurse extends Staff{
     public Nurse() {
 
     }
+
+    public Patient attendToPatient(Patient patient) {
+        return patient;
+    }
+
+    public void administerInjection() {
+
+    }
 }
