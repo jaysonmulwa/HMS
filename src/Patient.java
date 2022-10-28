@@ -36,8 +36,11 @@ public class Patient {
         ArrayList<Appointment> _appList = new ArrayList<Appointment>();
         this.appointmentList = _appList;
     }
-    public boolean bookAppointment(Appointment appointment) {
+    public void bookAppointment(Appointment appointment) {
         this.appointmentList.add(appointment);
-        return true;
+    }
+
+    public void makePayment(Payment payment, Appointment appointment) {
+        appointment.paymentsList.add(payment);
     }
 }
