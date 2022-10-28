@@ -1,4 +1,5 @@
 import java.util.Date;
+import java.util.Random;
 
 public class History {
 
@@ -7,8 +8,9 @@ public class History {
     public String narrative;
     public int staffId;
 
-    public History (int historyId, Date date, String narrative, int staffId) {
-        this.historyId = historyId;
+    public History (Date date, String narrative, int staffId) {
+        Random rand = new Random();
+        this.historyId  = rand.nextInt(1000);
         this.date = date;
         this.narrative = narrative;
         this.staffId = staffId;

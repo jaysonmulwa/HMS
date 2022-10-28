@@ -19,17 +19,13 @@ public class Nurse extends Staff{
     }
 
     public boolean attendToPatient(Patient patient) {
-        Random rand = new Random();
-        int historyId  = rand.nextInt(1000);
-        History history = new History(historyId, new Date(), "Attended to by nurse", this.staffId);
+        History history = new History(new Date(), "Attended to by nurse", this.staffId);
         patient.historyList.add(history);
         return true;
     }
 
     public boolean administerInjection(Patient patient) {
-        Random rand = new Random();
-        int historyId  = rand.nextInt(1000);
-        History history = new History(historyId, new Date(), "Received injection", this.staffId);
+        History history = new History(new Date(), "Received injection", this.staffId);
         patient.historyList.add(history);
         return true;
     }

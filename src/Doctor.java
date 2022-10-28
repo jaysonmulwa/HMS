@@ -22,17 +22,13 @@ public class Doctor extends Staff{
     }
 
     public boolean givePrescription (Patient patient) {
-        Random rand = new Random();
-        int historyId  = rand.nextInt(1000);
-        History history = new History( historyId, new Date(), "Prescription", this.staffId);
+        History history = new History(new Date(), "Prescription", this.staffId);
         patient.historyList.add(history);
         return true;
     }
 
     public boolean treatPatient (Patient patient) {
-        Random rand = new Random();
-        int historyId  = rand.nextInt(1000);
-        History history = new History(historyId, new Date(), "Treatment", this.staffId);
+        History history = new History(new Date(), "Treatment", this.staffId);
         patient.historyList.add(history);
         return true;
     }
