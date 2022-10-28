@@ -6,7 +6,10 @@ public class Appointment {
     public String appointmentDescription;
     public int staffId;
 
-    public Appointment () {
-
+    public Appointment (int _appointmentId, Date _appointmentDate, String _appointmentDescription, int _staffId) {
+        appointmentId = _appointmentId;
+        appointmentDate = _appointmentDate;
+        appointmentDescription = _appointmentDescription;
+        staffId = _staffId;
     }
 }

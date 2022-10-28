@@ -1,16 +1,16 @@
 import java.util.Date;
 
 public class Staff {
-    private int staffId;
-    private String employmentStatus;
-    private Date startDate;
-    private Date endDate;
-    private String education;
-    private String certifications;
-    private String languages;
-    private Date birtDate;
-    private Address address;
-    private Department department;
+    public int staffId;
+    public String employmentStatus;
+    public Date startDate;
+    public Date endDate;
+    public String education;
+    public String certifications;
+    public String languages;
+    public Date birthDate;
+    public Address address;
+    public Department department;
 
     public Staff() {
 
