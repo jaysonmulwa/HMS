@@ -1,4 +1,5 @@
 import java.util.Date;
+import java.util.Random;
 
 public class Nurse extends Staff{
     public String wardNumber;
@@ -17,11 +18,19 @@ public class Nurse extends Staff{
         wardNumber = _wardNumber;
     }
 
-    public Patient attendToPatient(Patient patient) {
-        return patient;
+    public boolean attendToPatient(Patient patient) {
+        Random rand = new Random();
+        int historyId  = rand.nextInt(1000);
+        History history = new History(historyId, new Date(), "Attended to by nurse", this.staffId);
+        patient.historyList.add(history);
+        return true;
     }
 
-    public void administerInjection() {
-
+    public boolean administerInjection(Patient patient) {
+        Random rand = new Random();
+        int historyId  = rand.nextInt(1000);
+        History history = new History(historyId, new Date(), "Received injection", this.staffId);
+        patient.historyList.add(history);
+        return true;
     }
 }
