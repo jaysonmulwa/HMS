@@ -1,15 +1,17 @@
+import java.util.Date;
+
 public class Address {
     private String title;
     private String firstName;
     private String middleName;
     private String lastName;
-    private String birthDate;
-    private boolean gender;
+    private Date birthDate;
+    private String gender;
     private String homeAddress;
     private String phone;
     private String kinContacts;
 
-    public Address (String _title, String _firstName, String _middleName, String _lastName, String _birthDate, boolean _gender, String _homeAddress, String _phone, String _kinContacts) {
+    public Address (String _title, String _firstName, String _middleName, String _lastName, Date _birthDate, String _gender, String _homeAddress, String _phone, String _kinContacts) {
         title = _title;
         firstName = _firstName;
         middleName = _middleName;

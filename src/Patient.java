@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Patient {
 
-    private int id;
+    public int id;
     private int age;
     private int weight;
     private String occupation;
@@ -16,6 +16,10 @@ public class Patient {
     private Address address;
     public ArrayList<History> historyList;
     public ArrayList<Appointment> appointmentList;
+
+    public String toString() {
+        return this.sickness;
+    }
 
     public Patient (int age, int weight, String occupation, Date dateAdmitted, String sickness, String prescription, String allergies, String specialRequests, Address address) {
         Random rand = new Random();
@@ -43,4 +47,13 @@ public class Patient {
     public void makePayment(Payment payment, Appointment appointment) {
         appointment.paymentsList.add(payment);
     }
+
+    public void setSickness(String sickness) {
+        this.sickness = sickness;
+    }
+
+    public void setPrescription(String prescription) {
+        this.prescription = prescription;
+    }
+
 }
