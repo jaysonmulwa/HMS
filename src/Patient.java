@@ -17,8 +17,9 @@ public class Patient {
     public ArrayList<History> historyList;
     public ArrayList<Appointment> appointmentList;
 
-    public Patient (int id, int age, int weight, String occupation, Date dateAdmitted, String sickness, String prescription, String allergies, String specialRequests, Address address) {
-        this.id = id;
+    public Patient (int age, int weight, String occupation, Date dateAdmitted, String sickness, String prescription, String allergies, String specialRequests, Address address) {
+        Random rand = new Random();
+        this.id  = rand.nextInt(1000);
         this.age = age;
         this.weight = weight;
         this.occupation = occupation;
@@ -31,7 +32,6 @@ public class Patient {
 
         ArrayList<History> _hs = new ArrayList<History>();
         this.historyList = _hs;
-
 
         ArrayList<Appointment> _appList = new ArrayList<Appointment>();
         this.appointmentList = _appList;

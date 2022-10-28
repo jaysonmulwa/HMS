@@ -4,8 +4,9 @@ import java.util.Random;
 public class Nurse extends Staff{
     public String wardNumber;
 
-    public Nurse(int _staffId, String _employmentStatus, Date _startDate, Date _endDate, String _education, String _certifications, String _languages, Date _birthDate, Address _address, Department _department, String _wardNumber) {
-        staffId = _staffId;
+    public Nurse(String _employmentStatus, Date _startDate, Date _endDate, String _education, String _certifications, String _languages, Date _birthDate, Address _address, Department _department, String _wardNumber) {
+        Random rand = new Random();
+        this.staffId  = rand.nextInt(1000);
         employmentStatus = _employmentStatus;
         startDate = _startDate;
         endDate = _endDate;
