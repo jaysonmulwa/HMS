@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Random;
 
 public class Patient {
 
@@ -14,6 +15,7 @@ public class Patient {
     private String specialRequests;
     private Address address;
     public ArrayList<History> historyList;
+    public ArrayList<Appointment> appointmentList;
 
     public Patient (int id, int age, int weight, String occupation, Date dateAdmitted, String sickness, String prescription, String allergies, String specialRequests, Address address) {
         this.id = id;
@@ -26,10 +28,16 @@ public class Patient {
         this.allergies = allergies;
         this.specialRequests = specialRequests;
         this.address = address;
+
         ArrayList<History> _hs = new ArrayList<History>();
         this.historyList = _hs;
+
+
+        ArrayList<Appointment> _appList = new ArrayList<Appointment>();
+        this.appointmentList = _appList;
     }
-    public Appointment bookAppointment() {
-        return null;
+    public boolean bookAppointment(Appointment appointment) {
+        this.appointmentList.add(appointment);
+        return true;
     }
 }
