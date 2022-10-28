@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Patient {
@@ -12,9 +13,21 @@ public class Patient {
     private String allergies;
     private String specialRequests;
     private Address address;
+    public ArrayList<History> historyList;
 
-    public Patient () {
-
+    public Patient (int id, int age, int weight, String occupation, Date dateAdmitted, String sickness, String prescription, String allergies, String specialRequests, Address address) {
+        this.id = id;
+        this.age = age;
+        this.weight = weight;
+        this.occupation = occupation;
+        this.dateAdmitted = dateAdmitted;
+        this.sickness = sickness;
+        this.prescription = prescription;
+        this.allergies = allergies;
+        this.specialRequests = specialRequests;
+        this.address = address;
+        ArrayList<History> _hs = new ArrayList<History>();
+        this.historyList = _hs;
     }
     public Appointment bookAppointment() {
         return null;

@@ -7,10 +7,10 @@ public class History {
     public String narrative;
     public int staffId;
 
-    public History (int _historyId, Date _date, String _narrative, int _staffId) {
-        historyId = _historyId;
-        date = _date;
-        narrative = _narrative;
-        staffId = _staffId;
+    public History (int historyId, Date date, String narrative, int staffId) {
+        this.historyId = historyId;
+        this.date = date;
+        this.narrative = narrative;
+        this.staffId = staffId;
     }
 }
