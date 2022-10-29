@@ -22,4 +22,8 @@ public class Address {
         phone = _phone;
         kinContacts = _kinContacts;
     }
+
+    public String getFullName() {
+        return this.firstName + " " + this.lastName;
+    }
 }

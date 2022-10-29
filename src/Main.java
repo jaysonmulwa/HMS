@@ -11,9 +11,6 @@ public class Main {
         //5. Makes Payment
         //Exits
 
-
-
-
         //0.Init Doctor
         Address doctorsAddress = new Address("Mr", "Joseph", "Off.", "Set.", new Date(), "M", "Kisumu", "+00000", "+00000s");
         Department doctorsDepartment = new Department("ENT");
@@ -25,7 +22,7 @@ public class Main {
         Nurse nurse= new Nurse("Employed", new Date(), null, "Nursing", "Nursing", "English", new Date(), nurseAddress, nurseDepartment, "W001");
 
         //1.
-        Address patientAddress = new Address("Mr", "Seph", "Robert", "Biden", new Date(), "M", "Kisumu", "+00000", "+00000s");
+        Address patientAddress = new Address("Mr", "Joe", "Robert", "Biden", new Date(), "M", "Kisumu", "+00000", "+00000s");
         Patient patient = new Patient(31, 51, "Plumber", new Date(), null, null, "Lactose allergy", null, patientAddress);
 
         //2.
@@ -44,7 +41,16 @@ public class Main {
         Payment payment = new Payment("MPESA", 3000.0, "KSH", patient.id, appointment.appointmentId);
         patient.makePayment(payment, appointment);
 
-        System.out.print(patient);
+        //-----------------------------Checks---------------//
 
+        for (int x = 0; x < patient.appointmentList.size(); x++) {
+            System.out.println("\n Appointment: " + patient.appointmentList.get(x).appointmentDescription);
+        }
+
+        for (int x = 0; x < patient.historyList.size(); x++) {
+            System.out.println("\n History: " + patient.historyList.get(x).narrative);
+        }
+
+        System.out.println("\n " + payment.paymentMethod+ ": " + patient.address.getFullName() + " has paid " + payment.currencyCode + " "+ payment.paymentAmount);
     }
 }

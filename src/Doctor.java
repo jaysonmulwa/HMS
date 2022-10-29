@@ -31,7 +31,7 @@ public class Doctor extends Staff{
 
     public boolean treatPatient (Patient patient) {
         patient.setSickness("Malaria"); // diagnoses sickness here
-        History history = new History(new Date(), "Treatment: Malaria", this.staffId);
+        History history = new History(new Date(), "Treated for: Malaria", this.staffId);
         patient.historyList.add(history);
         return true;
     }

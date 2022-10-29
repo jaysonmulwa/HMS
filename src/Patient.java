@@ -13,13 +13,9 @@ public class Patient {
     private String prescription;
     private String allergies;
     private String specialRequests;
-    private Address address;
+    public Address address;
     public ArrayList<History> historyList;
     public ArrayList<Appointment> appointmentList;
-
-    public String toString() {
-        return this.sickness;
-    }
 
     public Patient (int age, int weight, String occupation, Date dateAdmitted, String sickness, String prescription, String allergies, String specialRequests, Address address) {
         Random rand = new Random();
