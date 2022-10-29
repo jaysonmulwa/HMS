@@ -17,7 +17,7 @@ public class Main {
         Doctor doctor = new Doctor("Employed", new Date(), null, "BMed.", "Certified", "English", new Date(), doctorsAddress, doctorsDepartment, "W001", "ENT");
 
         //0. Init Nurse
-        Address nurseAddress = new Address("Miss", "Josephina", "Belcalis", "Bacardi", new Date(), "M", "Kisumu", "+00000", "+00000s");
+        Address nurseAddress = new Address("Miss", "Josephina", "Belcalis", "Bacardi", new Date(), "F", "Kisumu", "+00000", "+00000s");
         Department nurseDepartment = new Department("ENT");
         Nurse nurse= new Nurse("Employed", new Date(), null, "Nursing", "Nursing", "English", new Date(), nurseAddress, nurseDepartment, "W001");
 
